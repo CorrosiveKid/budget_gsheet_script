@@ -38,6 +38,10 @@ The script reads these columns:
 | H | **Override** — if filled in, used instead of the tags in G |
 | I | **Split** — if filled in, used instead of the amount in D |
 
+Columns H and I aren't created by up_to_gsheets — add them yourself (headers
+`override` and `split` in H1 and I1) and fill them in by hand when you need
+to. Both can be left blank.
+
 The split keeps the transaction's original direction, so on a spend row you
 can type your share as either `50` or `-50` and it counts as spend either way.
 
@@ -86,7 +90,8 @@ Then from row 5, one row per category:
 ## Setup
 
 1. Set up [up_to_gsheets](https://github.com/CorrosiveKid/up_to_gsheets) to
-   sync transactions into a `2Up Spending` tab.
+   sync transactions into a `2Up Spending` tab, then add the `override` (H)
+   and `split` (I) columns to it.
 2. Create the `Config` and `Template` tabs as described above.
 3. Open **Extensions > Apps Script**, paste in the contents of
    `budget_system.gs`, and save.
