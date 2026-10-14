@@ -25,7 +25,9 @@ The spreadsheet needs these tabs:
 
 ### `2Up Spending` — transactions
 
-Filled in by your transaction sync. Row 1 is a header; data starts at row 2.
+Filled in by [up_to_gsheets](https://github.com/CorrosiveKid/up_to_gsheets),
+which syncs transactions from an Up 2Up account into the sheet. Row 1 is a
+header; data starts at row 2.
 The script reads these columns:
 
 | Column | Meaning |
@@ -83,13 +85,15 @@ Then from row 5, one row per category:
 
 ## Setup
 
-1. Create the `2Up Spending`, `Config` and `Template` tabs as described above.
-2. Open **Extensions > Apps Script**, paste in the contents of
+1. Set up [up_to_gsheets](https://github.com/CorrosiveKid/up_to_gsheets) to
+   sync transactions into a `2Up Spending` tab.
+2. Create the `Config` and `Template` tabs as described above.
+3. Open **Extensions > Apps Script**, paste in the contents of
    `budget_system.gs`, and save.
-3. Check **Project Settings > Time zone** matches yours; tab names and dates use
+4. Check **Project Settings > Time zone** matches yours; tab names and dates use
    the script's time zone.
-4. Reload the spreadsheet. A **Budget** menu appears.
-5. Click **Budget > Create Next Month Tab** and approve the permissions prompt.
+5. Reload the spreadsheet. A **Budget** menu appears.
+6. Click **Budget > Create Next Month Tab** and approve the permissions prompt.
 
 If there are no month tabs yet, the first one is for the cycle that contains
 today.
